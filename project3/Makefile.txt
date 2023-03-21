@@ -1,1 +1,3 @@
-
+all:
+	cp xkcdpwgen.py xkcdpwgen
+	chmod +x xkcdpwgen
