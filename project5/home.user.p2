@@ -1,0 +1,25 @@
+# Last Modified: Thu Apr 20 00:23:09 2023
+abi <abi/3.0>,
+
+include <tunables/global>
+
+/home/alexamirejibi/cy2550/project5/p2 flags=(audit) {
+  include <abstractions/base>
+  network tcp,
+  /etc/crontab r,
+  /etc/fstab r,
+  /etc/hosts r,
+  /etc/passwd r,
+  /home/alexamirejibi/cy2550/project5/p2 mr,
+  /proc/buddyinfo r,
+  /proc/version r,
+  /run/systemd/resolve/stub-resolv.conf r,
+  /tmp/project[0-9]* rw,
+  /var/log/syslog r,
+  owner /home/*/.project2/config w,
+  owner /home/*/cy2550/project5/template r,
+  deny /etc/ld/so.cache rw,
+  deny /proc/cpuinfo rw,
+  deny /etc/hosts/deny rw,  
+  deny /proc/meminfo rw,
+}
